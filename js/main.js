@@ -3,15 +3,18 @@ createButton.addEventListener("click", createGrid);
 
 function createGrid() {
   if(document.querySelector("table")) {
-  document.querySelector("table").remove();
+    document.querySelector("table").remove();
+    document.querySelector("#canvas-text").remove();
   }
+  
   let gridWidth = document.querySelector("#grid-width").value;
   let gridHeight = document.querySelector("#grid-height").value;
   document.querySelector("#picker-control").reset();
+  
   if(((gridHeight === "")||(gridWidth === ""))) {
-    alert("You didn't enter the grid!");
+    alert("You didn't enter the grid height and width");
   } else if((gridHeight === "0")||(gridWidth === "0")) {
-    alert("Hey you entered an invalid grid!");
+    alert("Hey you entered an invalid grid height or width");
   } else {
     let paintArea = document.querySelector("#paint-area");
     let table = document.createElement("table");
@@ -24,6 +27,10 @@ function createGrid() {
       }
       table.appendChild(row);
     }
+    let canvasText = document.createElement("p");
+    canvasText.setAttribute("id","canvas-text");
+    canvasText.textContent = "Design Canvas";
+    paintArea.appendChild(canvasText);
     paintArea.appendChild(table);
     let cells = document.querySelectorAll("td");
     for(let n = 0; n < cells.length; n++) {

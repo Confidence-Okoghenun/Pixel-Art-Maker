@@ -2,22 +2,49 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pixel Art Make</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pixel Art Make</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu" rel="stylesheet">
 </head>
 
 <body>
-  <form id="picker-control">
-    <label for="grid-width">Enter Width</label>
-    <input id="grid-width" type="number" placeholder="enter grid width">
-    <label for="grid-height">Enter Height</label>
-    <input id="grid-height" type="number" placeholder="enter grid height">
-  </form>
-  <button id="create-grid">Create</button>
-  <input id="color" type="color">
+  <h1>Pixel Art Maker</h1>
+  <div class="container">
+    <form id="picker-control">
+      <div class="row">
+        <div class="col-25">
+          <label for="grid-width">Grid Width</label>
+        </div>
+        <div class="col-75">
+          <input id="grid-width" type="number" >
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="grid-height">Grid Height</label>
+        </div>
+        <div class="col-75">
+          <input id="grid-height" type="number">
+        </div>
+      </div>
+    </form>
+    
+    <div class="row">
+      <div class="col-25">
+        <button id="create-grid">Create</button>
+      </div>
+    </div>
+    
+    <div class="pick">
+      <label for="color">Pick a color</label>
+      <input id="color" type="color">
+    </div>
+  </div>
+  
   <div id="paint-area"></div>
   <script src="js/main.js"></script>
 </body>
