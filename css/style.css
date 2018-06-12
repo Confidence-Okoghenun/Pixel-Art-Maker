@@ -71,6 +71,10 @@ input[type=color] {
   button {
     margin: 30px 0 20px 0;
   }
+  
+  #paint-area {
+    margin-left: 11px;
+  }
 }
 
 #canvas-text {
